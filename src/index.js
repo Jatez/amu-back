@@ -22,4 +22,7 @@ app.listen(process.env.PORT || 3000,() => {
     console.log(`Server Started at ${3001}`)
 })
 
+alert.apply('Connect')
+
+
 module.exports = app;
