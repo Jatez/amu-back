@@ -1,0 +1,48 @@
+image: node:16.13.1
+
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+install:
+  stage: install
+  script: 
+    - npm install
+  artifacts:
+    expire_in: 1h
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+
+tests:
+  stage: test
+  script:
+    - npm test
+  coverage: '/Statements.*?(\d+(?:\.\d+)?)%/'
+
+build:
+  stage: build
+  variables:
+    BUILD_CONFIG: 'production'
+  script:
+    - npm i -g heroku
+    - heroku login
+    - git init
+    - heroku git:remote -a laboratorio-amu2
+#    - git add .
+#    - git commit -am "make it better"
+#    - git push heroku HEAD:master
+  only:
+    - main
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  environment: production
+  script:
+    - node --version
+    - echo "Desplegando aplicación en heroku..."
+    - echo "Ingresar al siguiente link https://amu-backend.herokuapp.com/equipos"
