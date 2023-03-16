@@ -27,15 +27,4 @@ El proyecto se propone como solución a la necesidad identificada en los laborat
 
 ![MONGODB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## **Diseño de Casos de Prueba**:
 
-- [🔭 Diseño](https://docs.google.com/spreadsheets/d/1xnsxrPEcx1vGdrFHuL2r-OuPf9q6fyJmAvupIG_XANY/edit?usp=sharing)
-
-## **Pruebas**:
-
-- [Pruebas](https://drive.google.com/file/d/1Sr9G6vMWE73vEnuoM7WqQVxbEild2aEn/view?usp=sharing)
-
-## **Referencias**:
-
-- [🔧 Documentacion Mongobd - Node](https://www.freecodecamp.org/news/build-a-restful-api-using-node-express-and-mongodb/)
-- [🚀 Documentacion Pruebas](https://www.paradigmadigital.com/dev/testeando-javascript-mocha-chai/)
